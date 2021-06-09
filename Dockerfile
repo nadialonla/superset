@@ -119,6 +119,8 @@ HEALTHCHECK CMD curl -f "http://localhost:$SUPERSET_PORT/health"
 
 EXPOSE ${SUPERSET_PORT}
 
+USER root
+
 ENTRYPOINT ["/usr/bin/docker-entrypoint.sh"]
 
 ######################################################################
